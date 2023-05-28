@@ -1,0 +1,33 @@
+#myVideo {
+  position: fixed;
+  min-width: 100%; 
+  min-height: 100%;
+  max-width: none;
+}
+.room-home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top:160px;
+}
+.home-content {
+  background: rgba(61, 61, 61, 0.336);
+  width: 40%;
+  min-height: 40%;
+}
+#chat-message-submit:hover{
+  background: rgba(255, 255, 255, 0.212);
+}
+
+.msg-content{
+  background: #212529;
+  color: white;
+  border-radius: 0px 4px 4px 4px;
+  max-width: 80%;
+}
+
+.send-btn:hover{
+  background: none;
+}

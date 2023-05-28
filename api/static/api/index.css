@@ -1,0 +1,23 @@
+
+  #myVideo {
+    position: fixed;
+    min-width: 100%; 
+    min-height: 100%;
+    max-width: none;
+  }
+  .home{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top:160px
+  }
+  .home-content {
+    background: rgba(255, 255, 255, 0.096);
+    border-radius: 4px;
+    width: 45%;
+    color: #f1f1f1;
+    padding: 40px;
+  }
+  #room-name-submit:hover{
+    background: rgba(255, 255, 255, 0.212);
+  }
