@@ -20,6 +20,7 @@
     </video>
     <div class="room-home">
       <h1 class="text-white text-4xl mb-4">{{room_name}}</h1>
+      <h1 class="text-white text-4xl mb-4">{{col}}</h1>
       <div class="home-content">
         <div id="msg-block-div">
           <div class="flex mt-10 ml-10">
@@ -35,7 +36,7 @@
             <div class="msg-content text-sm">
               <div id="msg-content-block" class="p-2">
                 <div class="mb-1">
-                  <p class="text-blue-400">anshikadubey</p>
+                  <p class="text-blue-400">john</p>
                 </div>
                 <div>Hello!</div>
               </div>
@@ -58,9 +59,13 @@
   </div>
   {{ request.user.username|json_script:"user_username" }}
   {{room_name|json_script:"room-name"}}
+  {{col|json_script:"col"}}
   <script>
     const roomName = JSON.parse(
       document.getElementById("room-name").textContent
+    );
+    const col = JSON.parse(
+      document.getElementById("col").textContent
     );
     const user_username = JSON.parse(
       document.getElementById("user_username").textContent
@@ -101,7 +106,7 @@
             <div class="msg-content text-sm">
                 <div id="msg-content-block" class="p-2">
                     <div class="mb-1">
-                        <p class="text-blue-400">${data.username}</p>
+                        <p class="text-[${data.col}]">${data.username}</p>
                     </div>
                     <div>${data.message}</div>
                 </div>
@@ -129,6 +134,7 @@
         JSON.stringify({
           message: message,
           username: user_username,
+          col:col,
         })
       );
       messageInputDom.value = "";
